@@ -1,5 +1,5 @@
 <xml xmlns:o="urn:schemas-microsoft-com:office:office">
- <o:MainFile HRef="../Kitap1.htm"/>
+ <o:MainFile HRef="Kitap1.htm"/>
  <o:File HRef="stylesheet.css"/>
  <o:File HRef="sheet001.htm"/>
  <o:File HRef="filelist.xml"/>
