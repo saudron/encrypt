@@ -1,0 +1,1667 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title>.</title>
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+	
+<style>
+::-moz-selection { /* Code for Firefox */
+    color: #21ff21;
+    background: white;
+}
+
+::selection {
+    color: #21ff21;
+    background: white;
+
+</style>
+
+	
+<style type="text/css" media="all">
+
+body {
+/*	font-family: Arial, Helvetica, Verdana, Sans-serif;*/
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	/*color: #222222;*/
+	color: black;
+	/*background: #ffffff;*/
+	background: #000000;
+	/*text-align: center;*/
+  line-height: 1.6;
+}
+
+h1 {  /* page title */
+  font: 3em Tahoma, Impact, Arial, Helvetica, sans-serif;
+  /*margin-top:    10;*/
+  /*margin-left:    10;*/
+  color: #2222dd;
+  margin-bottom: 0;
+  }
+
+h2 {  /* section / sub-head */
+  font: italic bold 2em Garamond, "Times New Roman", Times, serif;
+  text-align: left;
+  color: #111111;
+  /*padding-left: 80px;*/
+	padding: 0 0 0 80px;
+  }
+
+h3 {  /* top-level 'content' header */
+  font: italic 1.8em "Arial", Tahoma, Impact, Arial, Helvetica, sans-serif;
+  /*color: black;*/
+  color: #222288;
+  /*padding-left: 30px;*/
+  }
+
+h4 {  /* 2nd-level 'content' header */
+  font:  1.6em Garamond, "Times New Roman", Times, serif;
+  padding-left: 60px;
+  }
+
+h5 {
+  font-size: 1.2em;
+  margin-top: 1em;
+  margin-bottom: 0.2em;
+  }
+
+hr { 
+  color: black; 
+  background: black; 
+  height: 2px; 
+  border: 0; 
+  }
+  
+
+li {
+  margin-top:   0em;
+  margin-bottom: 0.5em;
+  margin-left:   3.2em;
+  margin-right:    0em; 
+}
+
+a {
+  /*font-weight: normal;*/
+  color: #2222cc;
+  text-decoration: none;
+  /*font-size: 1.2em;*/
+  font-weight: bold;
+  }
+h1 a {
+  font-weight: normal;
+  }
+a:hover {
+  text-decoration: underline;
+  }
+
+.hidden {
+	display: none;
+}
+
+#page-container {
+	/*width: 760px;*/
+	width: 90%;
+	margin: auto;
+	text-align: left;
+	/*background: lavender;*/
+}
+
+#content .padding {
+	padding: 20px;
+}
+
+#content p {
+	margin: 0;
+	padding: 0;
+	padding-bottom: 15px;
+  padding-left: 80px;
+  padding-right: 80px;
+  /*font-size: 1.2em;*/
+}
+
+#lang {
+  text-align: right;
+  font-size: 0.9em;
+  color: #000000;
+  text-align: center;
+}
+
+#lang a {
+  color: #000000;
+  font-weight: normal;
+  font-family: 'Lucida Sans Typewriter', 'Lucida Console', monaco, 'Bitstream Vera Sans Mono', monospace;
+  font-size: 0.9em;
+  }
+
+#footer {
+	clear: both;
+	height: 0px;
+	font-family: Tahoma, Arial, Helvetica, Sans-serif;
+	font-size: 12px;
+	color: #000000;
+	border-top: 0px solid #efefef;
+	padding: 13px 25px;
+	line-height: 18px;
+	text-align: center;
+	font-family: 'Copperplate Gothic Light';
+}
+
+#footer a {
+  color: #000000;
+  font-weight: normal;
+  }
+  
+span {
+    color:#21ff21;
+    filter:alpha(opacity=100);
+    opacity:6;
+	font-family: 'Lucida Sans Typewriter', 'Lucida Console', monaco, 'Bitstream Vera Sans Mono', monospace;
+	font-weight: normal;
+}
+
+#translatedby { 
+    color: black;
+}
+
+#btlock {
+  font-family: 'Lucida Sans Typewriter', 'Lucida Console', monaco, 'Bitstream Vera Sans Mono', monospace;
+  font-size: 12px;
+  margin-top: 15px;
+  margin-bottom: 13px;
+}
+
+#btunlock {
+  font-family: 'Lucida Sans Typewriter', 'Lucida Console', monaco, 'Bitstream Vera Sans Mono', monospace;
+  font-size: 12px;
+  margin-top: 15px;
+  margin-bottom: 13px;
+}
+
+#btreset {
+  font-family: 'Lucida Sans Typewriter', 'Lucida Console', monaco, 'Bitstream Vera Sans Mono', monospace;
+  font-size: 12px;
+  margin-top: 15px;
+}
+
+#btcopy {
+  font-family: 'Lucida Sans Typewriter', 'Lucida Console', monaco, 'Bitstream Vera Sans Mono', monospace;
+  font-size: 12px;
+  margin-top: 15px;
+}
+
+#txtin {
+  font-family: 'Lucida Sans Typewriter', 'Lucida Console', monaco, 'Bitstream Vera Sans Mono', monospace;
+  font-size: 13px;
+  color:#21ff21;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  background: #000000;
+  border-color: #444444;
+  box-shadow: 0 0 6px #444444;
+  border-style:dashed; 
+}
+
+#txtout {
+  font-family: 'Lucida Sans Typewriter', 'Lucida Console', monaco, 'Bitstream Vera Sans Mono', monospace;
+  font-size: 13px;
+  color:#21ff21;
+  margin-top: 10px;
+  border-color: #444444;
+  box-shadow: 0 0 6px #444444;
+  border-style:dashed;
+}
+
+#pp {
+  font-family: 'Lucida Sans Typewriter', 'Lucida Console', monaco, 'Bitstream Vera Sans Mono', monospace;
+  font-size: 13px;
+  color:#21ff21;
+  margin-top: 11px;
+  background: #000000;
+  border-color: #444444;
+  border: 1;
+  border-style:dotted;
+}
+
+textarea:focus {
+    outline: 1px;
+	border-color: #21ff21;
+}
+
+#pp:focus {
+    outline:none;
+	border-color: #444444;
+}
+  
+</style>
+<script>
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/*  AES implementation in JavaScript (c) Chris Veness 2005-2008                                   */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+
+/*
+ * AES Cipher function: encrypt 'input' with Rijndael algorithm
+ *
+ *   takes   byte-array 'input' (16 bytes)
+ *           2D byte-array key schedule 'w' (Nr+1 x Nb bytes)
+ *
+ *   applies Nr rounds (10/12/14) using key schedule w for 'add round key' stage
+ *
+ *   returns byte-array encrypted value (16 bytes)
+ */
+
+// http://www.movable-type.co.uk/scripts/aes-lib.js
+// http://www.movable-type.co.uk/scripts/aes.html
+// Nov 8, 2009, Arthur Zhang (mail2arthur@gmail.com): move lib under fairsimple.imported.aeslib_from_movalbe_type_co_uk namespace
+// Feb 2010, change String.proto type.*
+
+if(!fairsimple) var fairsimple={};
+if(!fairsimple.imported) fairsimple.imported={};
+fairsimple.imported.aeslib_from_movalbe_type_co_uk = function() {
+
+function Cipher(input, w) {    // main Cipher function [ 5.1]
+  var Nb = 4;               // block size (in words): no of columns in state (fixed at 4 for AES)
+  var Nr = w.length/Nb - 1; // no of rounds: 10/12/14 for 128/192/256-bit keys
+
+  var state = [[],[],[],[]];  // initialise 4xNb byte-array 'state' with input [ 3.4]
+  for (var i=0; i<4*Nb; i++) state[i%4][Math.floor(i/4)] = input[i];
+
+  state = AddRoundKey(state, w, 0, Nb);
+
+  for (var round=1; round<Nr; round++) {
+    state = SubBytes(state, Nb);
+    state = ShiftRows(state, Nb);
+    state = MixColumns(state, Nb);
+    state = AddRoundKey(state, w, round, Nb);
+  }
+
+  state = SubBytes(state, Nb);
+  state = ShiftRows(state, Nb);
+  state = AddRoundKey(state, w, Nr, Nb);
+
+  var output = new Array(4*Nb);  // convert state to 1-d array before returning [ 3.4]
+  for (var i=0; i<4*Nb; i++) output[i] = state[i%4][Math.floor(i/4)];
+  return output;
+}
+
+
+function SubBytes(s, Nb) {    // apply SBox to state S [ 5.1.1]
+  for (var r=0; r<4; r++) {
+    for (var c=0; c<Nb; c++) s[r][c] = Sbox[s[r][c]];
+  }
+  return s;
+}
+
+
+function ShiftRows(s, Nb) {    // shift row r of state S left by r bytes [ 5.1.2]
+  var t = new Array(4);
+  for (var r=1; r<4; r++) {
+    for (var c=0; c<4; c++) t[c] = s[r][(c+r)%Nb];  // shift into temp copy
+    for (var c=0; c<4; c++) s[r][c] = t[c];         // and copy back
+  }          // note that this will work for Nb=4,5,6, but not 7,8 (always 4 for AES):
+  return s;  // see fp.gladman.plus.com/cryptography_technology/rijndael/aes.spec.311.pdf 
+}
+
+
+function MixColumns(s, Nb) {   // combine bytes of each col of state S [ 5.1.3]
+  for (var c=0; c<4; c++) {
+    var a = new Array(4);  // 'a' is a copy of the current column from 's'
+    var b = new Array(4);  // 'b' is ??{02} in GF(2^8)
+    for (var i=0; i<4; i++) {
+      a[i] = s[i][c];
+      b[i] = s[i][c]&0x80 ? s[i][c]<<1 ^ 0x011b : s[i][c]<<1;
+    }
+    // a[n] ^ b[n] is ??{03} in GF(2^8)
+    s[0][c] = b[0] ^ a[1] ^ b[1] ^ a[2] ^ a[3]; // 2*a0 + 3*a1 + a2 + a3
+    s[1][c] = a[0] ^ b[1] ^ a[2] ^ b[2] ^ a[3]; // a0 * 2*a1 + 3*a2 + a3
+    s[2][c] = a[0] ^ a[1] ^ b[2] ^ a[3] ^ b[3]; // a0 + a1 + 2*a2 + 3*a3
+    s[3][c] = a[0] ^ b[0] ^ a[1] ^ a[2] ^ b[3]; // 3*a0 + a1 + a2 + 2*a3
+  }
+  return s;
+}
+
+
+function AddRoundKey(state, w, rnd, Nb) {  // xor Round Key into state S [ 5.1.4]
+  for (var r=0; r<4; r++) {
+    for (var c=0; c<Nb; c++) state[r][c] ^= w[rnd*4+c][r];
+  }
+  return state;
+}
+
+function KeyExpansion(key) {  // generate Key Schedule (byte-array Nr+1 x Nb) from Key [ 5.2]
+  var Nb = 4;            // block size (in words): no of columns in state (fixed at 4 for AES)
+  var Nk = key.length/4  // key length (in words): 4/6/8 for 128/192/256-bit keys
+  var Nr = Nk + 6;       // no of rounds: 10/12/14 for 128/192/256-bit keys
+
+  var w = new Array(Nb*(Nr+1));
+  var temp = new Array(4);
+
+  for (var i=0; i<Nk; i++) {
+    var r = [key[4*i], key[4*i+1], key[4*i+2], key[4*i+3]];
+    w[i] = r;
+  }
+
+  for (var i=Nk; i<(Nb*(Nr+1)); i++) {
+    w[i] = new Array(4);
+    for (var t=0; t<4; t++) temp[t] = w[i-1][t];
+    if (i % Nk == 0) {
+      temp = SubWord(RotWord(temp));
+      for (var t=0; t<4; t++) temp[t] ^= Rcon[i/Nk][t];
+    } else if (Nk > 6 && i%Nk == 4) {
+      temp = SubWord(temp);
+    }
+    for (var t=0; t<4; t++) w[i][t] = w[i-Nk][t] ^ temp[t];
+  }
+
+  return w;
+}
+
+function SubWord(w) {    // apply SBox to 4-byte word w
+  for (var i=0; i<4; i++) w[i] = Sbox[w[i]];
+  return w;
+}
+
+function RotWord(w) {    // rotate 4-byte word w left by one byte
+  var tmp = w[0];
+  for (var i=0; i<3; i++) w[i] = w[i+1];
+  w[3] = tmp;
+  return w;
+}
+
+
+// Sbox is pre-computed multiplicative inverse in GF(2^8) used in SubBytes and KeyExpansion [ 5.1.1]
+var Sbox =  [0x63,0x7c,0x77,0x7b,0xf2,0x6b,0x6f,0xc5,0x30,0x01,0x67,0x2b,0xfe,0xd7,0xab,0x76,
+             0xca,0x82,0xc9,0x7d,0xfa,0x59,0x47,0xf0,0xad,0xd4,0xa2,0xaf,0x9c,0xa4,0x72,0xc0,
+             0xb7,0xfd,0x93,0x26,0x36,0x3f,0xf7,0xcc,0x34,0xa5,0xe5,0xf1,0x71,0xd8,0x31,0x15,
+             0x04,0xc7,0x23,0xc3,0x18,0x96,0x05,0x9a,0x07,0x12,0x80,0xe2,0xeb,0x27,0xb2,0x75,
+             0x09,0x83,0x2c,0x1a,0x1b,0x6e,0x5a,0xa0,0x52,0x3b,0xd6,0xb3,0x29,0xe3,0x2f,0x84,
+             0x53,0xd1,0x00,0xed,0x20,0xfc,0xb1,0x5b,0x6a,0xcb,0xbe,0x39,0x4a,0x4c,0x58,0xcf,
+             0xd0,0xef,0xaa,0xfb,0x43,0x4d,0x33,0x85,0x45,0xf9,0x02,0x7f,0x50,0x3c,0x9f,0xa8,
+             0x51,0xa3,0x40,0x8f,0x92,0x9d,0x38,0xf5,0xbc,0xb6,0xda,0x21,0x10,0xff,0xf3,0xd2,
+             0xcd,0x0c,0x13,0xec,0x5f,0x97,0x44,0x17,0xc4,0xa7,0x7e,0x3d,0x64,0x5d,0x19,0x73,
+             0x60,0x81,0x4f,0xdc,0x22,0x2a,0x90,0x88,0x46,0xee,0xb8,0x14,0xde,0x5e,0x0b,0xdb,
+             0xe0,0x32,0x3a,0x0a,0x49,0x06,0x24,0x5c,0xc2,0xd3,0xac,0x62,0x91,0x95,0xe4,0x79,
+             0xe7,0xc8,0x37,0x6d,0x8d,0xd5,0x4e,0xa9,0x6c,0x56,0xf4,0xea,0x65,0x7a,0xae,0x08,
+             0xba,0x78,0x25,0x2e,0x1c,0xa6,0xb4,0xc6,0xe8,0xdd,0x74,0x1f,0x4b,0xbd,0x8b,0x8a,
+             0x70,0x3e,0xb5,0x66,0x48,0x03,0xf6,0x0e,0x61,0x35,0x57,0xb9,0x86,0xc1,0x1d,0x9e,
+             0xe1,0xf8,0x98,0x11,0x69,0xd9,0x8e,0x94,0x9b,0x1e,0x87,0xe9,0xce,0x55,0x28,0xdf,
+             0x8c,0xa1,0x89,0x0d,0xbf,0xe6,0x42,0x68,0x41,0x99,0x2d,0x0f,0xb0,0x54,0xbb,0x16];
+
+// Rcon is Round Constant used for the Key Expansion [1st col is 2^(r-1) in GF(2^8)] [ 5.2]
+var Rcon = [ [0x00, 0x00, 0x00, 0x00],
+             [0x01, 0x00, 0x00, 0x00],
+             [0x02, 0x00, 0x00, 0x00],
+             [0x04, 0x00, 0x00, 0x00],
+             [0x08, 0x00, 0x00, 0x00],
+             [0x10, 0x00, 0x00, 0x00],
+             [0x20, 0x00, 0x00, 0x00],
+             [0x40, 0x00, 0x00, 0x00],
+             [0x80, 0x00, 0x00, 0x00],
+             [0x1b, 0x00, 0x00, 0x00],
+             [0x36, 0x00, 0x00, 0x00] ]; 
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+
+/** 
+ * Encrypt a text using AES encryption in Counter mode of operation
+ *  - see http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf
+ *
+ * Unicode multi-byte character safe
+ *
+ * @param plaintext source text to be encrypted
+ * @param password  the password to use to generate a key
+ * @param nBits     number of bits to be used in the key (128, 192, or 256)
+ * @return          encrypted text
+ */
+function AESEncryptCtr(plaintext, password, nBits) {
+  var blockSize = 16;  // block size fixed at 16 bytes / 128 bits (Nb=4) for AES
+  if (!(nBits==128 || nBits==192 || nBits==256)) return '';  // standard allows 128/192/256 bit keys
+  plaintext = encodeUTF8(plaintext);
+  password = encodeUTF8(password);
+  //var t = new Date();  // timer
+	
+  // use AES itself to encrypt password to get cipher key (using plain password as source for key 
+  // expansion) - gives us well encrypted key
+  var nBytes = nBits/8;  // no bytes in key
+  var pwBytes = new Array(nBytes);
+  for (var i=0; i<nBytes; i++) {
+    pwBytes[i] = isNaN(password.charCodeAt(i)) ? 0 : password.charCodeAt(i);
+  }
+  var key = Cipher(pwBytes, KeyExpansion(pwBytes));  // gives us 16-byte key
+  key = key.concat(key.slice(0, nBytes-16));  // expand key to 16/24/32 bytes long
+
+  // initialise counter block (NIST SP800-38A  B.2): millisecond time-stamp for nonce in 1st 8 bytes,
+  // block counter in 2nd 8 bytes
+  var counterBlock = new Array(blockSize);
+  var nonce = (new Date()).getTime();  // timestamp: milliseconds since 1-Jan-1970
+  var nonceSec = Math.floor(nonce/1000);
+  var nonceMs = nonce%1000;
+  // encode nonce with seconds in 1st 4 bytes, and (repeated) ms part filling 2nd 4 bytes
+  for (var i=0; i<4; i++) counterBlock[i] = (nonceSec >>> i*8) & 0xff;
+  for (var i=0; i<4; i++) counterBlock[i+4] = nonceMs & 0xff; 
+  // and convert it to a string to go on the front of the ciphertext
+  var ctrTxt = '';
+  for (var i=0; i<8; i++) ctrTxt += String.fromCharCode(counterBlock[i]);
+
+  // generate key schedule - an expansion of the key into distinct Key Rounds for each round
+  var keySchedule = KeyExpansion(key);
+  
+  var blockCount = Math.ceil(plaintext.length/blockSize);
+  var ciphertxt = new Array(blockCount);  // ciphertext as array of strings
+  
+  for (var b=0; b<blockCount; b++) {
+    // set counter (block #) in last 8 bytes of counter block (leaving nonce in 1st 8 bytes)
+    // done in two stages for 32-bit ops: using two words allows us to go past 2^32 blocks (68GB)
+    for (var c=0; c<4; c++) counterBlock[15-c] = (b >>> c*8) & 0xff;
+    for (var c=0; c<4; c++) counterBlock[15-c-4] = (b/0x100000000 >>> c*8)
+
+    var cipherCntr = Cipher(counterBlock, keySchedule);  // -- encrypt counter block --
+    
+    // block size is reduced on final block
+    var blockLength = b<blockCount-1 ? blockSize : (plaintext.length-1)%blockSize+1;
+    var cipherChar = new Array(blockLength);
+    
+    for (var i=0; i<blockLength; i++) {  // -- xor plaintext with ciphered counter char-by-char --
+      cipherChar[i] = cipherCntr[i] ^ plaintext.charCodeAt(b*blockSize+i);
+      cipherChar[i] = String.fromCharCode(cipherChar[i]);
+    }
+    ciphertxt[b] = cipherChar.join(''); 
+  }
+
+  // Array.join is more efficient than repeated string concatenation
+  var ciphertext = ctrTxt + ciphertxt.join('');
+  ciphertext = encodeBase64(ciphertext);
+  //alert((new Date()) - t);
+  return ciphertext;
+}
+
+/** 
+ * Decrypt a text encrypted by AES in counter mode of operation
+ *
+ * @param ciphertext source text to be encrypted
+ * @param password   the password to use to generate a key
+ * @param nBits      number of bits to be used in the key (128, 192, or 256)
+ * @return           decrypted text
+ */
+function AESDecryptCtr(ciphertext, password, nBits) {
+  var blockSize = 16;  // block size fixed at 16 bytes / 128 bits (Nb=4) for AES
+  if (!(nBits==128 || nBits==192 || nBits==256)) return '';  // standard allows 128/192/256 bit keys
+  ciphertext = decodeBase64(ciphertext);
+  password = encodeUTF8(password);
+  //var t = new Date();  // timer
+  
+  // use AES to encrypt password (mirroring encrypt routine)
+  var nBytes = nBits/8;  // no bytes in key
+  var pwBytes = new Array(nBytes);
+  for (var i=0; i<nBytes; i++) {
+    pwBytes[i] = isNaN(password.charCodeAt(i)) ? 0 : password.charCodeAt(i);
+  }
+  var key = Cipher(pwBytes, KeyExpansion(pwBytes));
+  key = key.concat(key.slice(0, nBytes-16));  // expand key to 16/24/32 bytes long
+
+  // recover nonce from 1st 8 bytes of ciphertext
+  var counterBlock = new Array(8);
+  var ctrTxt = ciphertext.slice(0, 8);
+  for (var i=0; i<8; i++) counterBlock[i] = ctrTxt.charCodeAt(i);
+  
+  // generate key schedule
+  var keySchedule = KeyExpansion(key);
+
+  // separate ciphertext into blocks (skipping past initial 8 bytes)
+  var nBlocks = Math.ceil((ciphertext.length-8) / blockSize);
+  var ct = new Array(nBlocks);
+  for (var b=0; b<nBlocks; b++) ct[b] = ciphertext.slice(8+b*blockSize, 8+b*blockSize+blockSize);
+  ciphertext = ct;  // ciphertext is now array of block-length strings
+
+  // plaintext will get generated block-by-block into array of block-length strings
+  var plaintxt = new Array(ciphertext.length);
+
+  for (var b=0; b<nBlocks; b++) {
+    // set counter (block #) in last 8 bytes of counter block (leaving nonce in 1st 8 bytes)
+    for (var c=0; c<4; c++) counterBlock[15-c] = ((b) >>> c*8) & 0xff;
+    for (var c=0; c<4; c++) counterBlock[15-c-4] = (((b+1)/0x100000000-1) >>> c*8) & 0xff;
+
+    var cipherCntr = Cipher(counterBlock, keySchedule);  // encrypt counter block
+
+
+    var plaintxtByte = new Array(ciphertext[b].length);
+    for (var i=0; i<ciphertext[b].length; i++) {
+      // -- xor plaintxt with ciphered counter byte-by-byte --
+      plaintxtByte[i] = cipherCntr[i] ^ ciphertext[b].charCodeAt(i);
+      plaintxtByte[i] = String.fromCharCode(plaintxtByte[i]);
+    }
+    plaintxt[b] = plaintxtByte.join('');
+  }
+
+  // join array of blocks into single plaintext string
+  var plaintext = plaintxt.join('');
+  plaintext = decodeUTF8(plaintext);  // decode from UTF8 back to Unicode multi-byte chars
+  
+  //alert((new Date()) - t);
+  return plaintext;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+
+/**
+ * Encode string into Base64, as defined by RFC 4648 [http://tools.ietf.org/html/rfc4648]
+ * (instance method extending String object). As per RFC 4648, no newlines are added.
+ *
+ * @param utf8encode optional parameter, if set to true Unicode string is encoded to UTF8 before 
+ *                   conversion to base64; otherwise string is assumed to be 8-bit characters
+ * @return           base64-encoded string
+ */ 
+var b64 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+
+var encodeBase64 = function(thisstr, utf8encode) {  // http://tools.ietf.org/html/rfc4648
+  utf8encode =  (typeof utf8encode == 'undefined') ? false : utf8encode;
+  var o1, o2, o3, bits, h1, h2, h3, h4, e=[], pad = '', c, plain, coded;
+   
+  plain = utf8encode ? this.encodeUTF8() : thisstr;
+  
+  c = plain.length % 3;  // pad string to length of multiple of 3
+  if (c > 0) { while (c++ < 3) { pad += '='; plain += '\0'; } }
+  // note: doing padding here saves us doing special-case packing for trailing 1 or 2 chars
+   
+  for (c=0; c<plain.length; c+=3) {  // pack three octets into four hexets
+    o1 = plain.charCodeAt(c);
+    o2 = plain.charCodeAt(c+1);
+    o3 = plain.charCodeAt(c+2);
+      
+    bits = o1<<16 | o2<<8 | o3;
+      
+    h1 = bits>>18 & 0x3f;
+    h2 = bits>>12 & 0x3f;
+    h3 = bits>>6 & 0x3f;
+    h4 = bits & 0x3f;
+
+    // use hextets to index into b64 string
+    e[c/3] = b64.charAt(h1) + b64.charAt(h2) + b64.charAt(h3) + b64.charAt(h4);
+  }
+  coded = e.join('');  // join() is far faster than repeated string concatenation
+  
+  // replace 'A's from padded nulls with '='s
+  coded = coded.slice(0, coded.length-pad.length) + pad;
+   
+  return coded;
+}
+
+/**
+ * Decode string from Base64, as defined by RFC 4648 [http://tools.ietf.org/html/rfc4648]
+ * (instance method extending String object). As per RFC 4648, newlines are not catered for.
+ *
+ * @param utf8decode optional parameter, if set to true UTF8 string is decoded back to Unicode  
+ *                   after conversion from base64
+ * @return           decoded string
+ */ 
+decodeBase64 = function(thisstr, utf8decode) {
+  utf8decode =  (typeof utf8decode == 'undefined') ? false : utf8decode;
+  var o1, o2, o3, h1, h2, h3, h4, bits, d=[], plain, coded;
+
+  coded = utf8decode ? this.decodeUTF8() : thisstr;
+  
+  for (var c=0; c<coded.length; c+=4) {  // unpack four hexets into three octets
+    h1 = b64.indexOf(coded.charAt(c));
+    h2 = b64.indexOf(coded.charAt(c+1));
+    h3 = b64.indexOf(coded.charAt(c+2));
+    h4 = b64.indexOf(coded.charAt(c+3));
+      
+    bits = h1<<18 | h2<<12 | h3<<6 | h4;
+      
+    o1 = bits>>>16 & 0xff;
+    o2 = bits>>>8 & 0xff;
+    o3 = bits & 0xff;
+    
+    d[c/4] = String.fromCharCode(o1, o2, o3);
+    // check for padding
+    if (h4 == 0x40) d[c/4] = String.fromCharCode(o1, o2);
+    if (h3 == 0x40) d[c/4] = String.fromCharCode(o1);
+  }
+  plain = d.join('');  // join() is far faster than repeated string concatenation
+   
+  return utf8decode ? plain.decodeUTF8() : plain; 
+}
+
+/**
+ * Encode multi-byte Unicode string into utf-8 multiple single-byte characters 
+ * (BMP / basic multilingual plane only) (instance method extending String object).
+ *
+ * Chars in range U+0080 - U+07FF are encoded in 2 chars, U+0800 - U+FFFF in 3 chars
+ *
+ * @return encoded string
+ */
+encodeUTF8 = function(thisstr) {
+  // use regular expressions & String.replace callback function for better efficiency 
+  // than procedural approaches
+  var str = thisstr.replace(
+      /[\u0080-\u07ff]/g,  // U+0080 - U+07FF => 2 bytes 110yyyyy, 10zzzzzz
+      function(c) { 
+        var cc = c.charCodeAt(0);
+        return String.fromCharCode(0xc0 | cc>>6, 0x80 | cc&0x3f); }
+    );
+  str = str.replace(
+      /[\u0800-\uffff]/g,  // U+0800 - U+FFFF => 3 bytes 1110xxxx, 10yyyyyy, 10zzzzzz
+      function(c) { 
+        var cc = c.charCodeAt(0); 
+        return String.fromCharCode(0xe0 | cc>>12, 0x80 | cc>>6&0x3F, 0x80 | cc&0x3f); }
+    );
+  return str;
+}
+
+/**
+ * Decode utf-8 encoded string back into multi-byte Unicode characters
+ * (instance method extending String object).
+ *
+ * @return decoded string
+ */
+decodeUTF8 = function(thisstr) {
+  var str = thisstr.replace(
+      /[\u00c0-\u00df][\u0080-\u00bf]/g,                 // 2-byte chars
+      function(c) {  // (note parentheses for precence)
+        var cc = (c.charCodeAt(0)&0x1f)<<6 | c.charCodeAt(1)&0x3f;
+        return String.fromCharCode(cc); }
+    );
+  str = str.replace(
+      /[\u00e0-\u00ef][\u0080-\u00bf][\u0080-\u00bf]/g,  // 3-byte chars
+      function(c) {  // (note parentheses for precence)
+        var cc = ((c.charCodeAt(0)&0x0f)<<12) | ((c.charCodeAt(1)&0x3f)<<6) | ( c.charCodeAt(2)&0x3f); 
+        return String.fromCharCode(cc); }
+    );
+  return str;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+  return {
+    aes_encrypt : function(txt, pp) { return(AESEncryptCtr(txt, pp, 256)); },
+    aes_decrypt : function(txt, pp) { return(AESDecryptCtr(txt, pp, 256)); }
+  };
+}();
+</script>
+<script>
+/*
+  Copyright (c) 2009-2010 Arthur Zhang (mail2arthur@gmail.com)
+  
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+*/
+
+/*
+$Id: ltt-core.js 87 2011-03-14 02:18:54Z arthurzhang $
+*/
+if(!fairsimple) var fairsimple={};
+if(!fairsimple.lockthetext) fairsimple.lockthetext={};
+
+fairsimple.lockthetext.core = function() {
+  var lockthetext_const_header = "--BEGIN LOCKTHETEXT--";
+  var lockthetext_const_footer = "--END LOCKTHETEXT--";
+  
+  var cb = {log: ltt_log, hlp:ltt_help, msg:lockthetext_get_default_message, pp:null, getSelectedText:null, getFocusedElement:null, showText:null};
+  
+  function lockthetext_set_cbs(cbs) {
+    for(var mem in cbs) {
+    //  alert('cbs.'+mem+' is ' + cbs[mem]);
+      cb[mem] = cbs[mem];
+    }
+    //for(var mem in cb) {
+    //  alert('new cb.'+mem+' is ' + cb[mem]);
+    //}
+    //cb = cbs;
+  }
+  
+  function ltt_help(err) {
+    alert("Error: "+err);
+  }
+  
+  function ltt_log(msg) {
+    //alert("Log: "+msg);
+  }
+  
+  function ltt_getmsg(id, arg) {
+    var m = null;
+    if(cb.msg)
+      m = cb.msg(id,arg);
+    if(!m)
+      m = lockthetext_get_default_message(id, arg);
+    return m;
+  }
+  
+  function lockthetext_get_default_message(id, arg) {
+    var msgs = {  
+                  errNoMarker:"Can't find marker ",
+                  errNoLockPassphrase: 'You need to set a passphrase to lock the text',
+                  errNoUnlockPassphrase: 'You need set a passphrase to unlock the text',
+                  errNoTextToLock: 'No text to lock',
+                  errNoTextToUnlock: 'No text to unlock',
+                  lockedText: 'Locked text',
+                  unlockedText: 'Unlocked text',
+                  zz: ''
+                };
+    var msg;
+    if(msgs[id])
+      msg = msgs[id];
+    else {
+      cb.log('Failed to find msg: '+id);
+      msg = id;
+    }
+    if(arg)
+      msg += arg;
+    return msg;
+  }
+  
+  function lockthetext_get_selected_text()
+  {
+    var txt = {element:null, text:"", s:-1, e:-1, h:-1, f:-1, out:"", newwin:false};
+    //cb.log(getBrowser().contentWindow.getSelection().toString());
+    //cb.log(document.commandDispatcher.focusedWindow.getSelection());
+    //cb.log('content.getSelection()');
+    //cb.log("getBrowser().contentWindow.getSelection");
+    //cb.log('this.getFrame(getBrowser().contentWindow.frames)');
+    //cb.log(document.commandDispatcher.focusedElement.value);
+    txt.element = cb.getFocusedElement();
+    if(txt.element)
+    {
+      try
+      {
+        txt.s = txt.element.selectionStart;
+        txt.e = txt.element.selectionEnd;
+        if(txt.s==txt.e)
+        {
+          txt.text = txt.element.value;
+          txt.s = 0;
+          txt.e = txt.text.length;
+        }
+        else
+        {
+          txt.text = txt.element.value.substring(txt.s, txt.e);
+        }
+      }
+      catch (ex) 
+      {
+        txt.element = null;
+      }
+    }
+    if(txt.element==null)
+    {
+      txt.s = -1;
+      txt.e = -1;
+      txt.newwin = true;
+      txt.text = cb.getSelectedText();
+    }
+    return txt;
+  }
+
+  function lockthetext_get_locked_text(txt)
+  {
+    var reg=new RegExp("[^A-Z0-9+/=]", "gi");
+    var hdr = lockthetext_const_header.replace(reg,"");
+    var ftr = lockthetext_const_footer.replace(reg,"");
+    var lh, lf, textall=null, hoff=-1, foff=-1;
+    
+    lh = lockthetext_const_header.length;
+    lf = lockthetext_const_footer.length;
+    if(txt.element)
+    {
+      textall = txt.element.value;
+      hoff = textall.indexOf(lockthetext_const_header, txt.s);
+      if(hoff==-1 && txt.s>0)
+      {
+        hoff = textall.indexOf(lockthetext_const_header);
+        if(hoff==-1)
+        {
+          txt.element = null;
+        }
+      }
+      if(hoff>=0)
+      {
+        txt.h = hoff;
+        foff = textall.indexOf(lockthetext_const_footer, hoff+lh);
+        if(foff==-1)
+        {
+          txt.element = null;
+        }
+        else
+        {
+          txt.f = foff;
+          txt.out = textall.substring(txt.h+lh, txt.f).replace(reg,"");
+          txt.f += lf;
+          /*if(txt.h>0&&((textall.charAt(txt.h-1)=='\n')||(textall.charAt(txt.h-1)==' ')))
+            txt.h--;
+          if(txt.f<textall.length&&((textall.charAt(txt.f)=='\n')||(textall.charAt(txt.f)==' ')))
+            txt.f++;
+          if(txt.s-1<=txt.h && txt.f<=txt.e+1)*/
+          if(txt.s<=txt.h && txt.f<=txt.e)
+          {
+            //cb.log('Locked text in editable selection:'+txt.out);
+            return txt;
+          }
+        }
+      }
+    }
+    txt.text = txt.text.replace(reg,"");
+    hoff = txt.text.indexOf(hdr);
+    if(hoff>=0)
+    {
+      txt.h = hoff;
+      foff = txt.text.indexOf(ftr, hoff+hdr.length);
+      if(foff>0)
+      {
+        txt.f = foff;
+        txt.out = txt.text.substring(txt.h+hdr.length, txt.f);
+        txt.element = null;
+        txt.newwin = true;
+        //cb.log('Locked text in selection:'+txt.out);
+        return txt;
+      }
+    }
+    if(txt.element)
+    {
+      //cb.log('Locked text in editable field:'+txt.out);
+      //cb.log(txt.s+','+txt.h+','+txt.f+','+txt.e+'.');
+      if(txt.s>txt.h)
+        txt.s = txt.h;
+      if(txt.e<txt.f)
+        txt.e = txt.f;
+      return txt;
+    }
+    if(textall)
+    {
+      txt.text = textall.replace(reg,"");
+      hoff = txt.text.indexOf(hdr);
+      if(hoff>=0)
+      {
+        foff = txt.text.indexOf(ftr, hoff+hdr.length);
+        if(foff>0)
+        {
+          txt.h = hoff;
+          txt.f = foff;
+          txt.out = txt.text.substring(txt.h+hdr.length, txt.f);
+          //cb.log('Locked text with chars in editable field:'+txt.out);
+          return txt;
+        }
+      }
+    }
+    txt.h = hoff;
+    txt.f = foff;
+    //cb.log('Locked text not found '+txt.h+','+txt.f);
+    return txt;
+  }
+  
+function lockthetext_lock()
+  {
+    var txt = lockthetext_get_selected_text();
+    if(!txt.text)
+    {
+      cb.hlp(ltt_getmsg("errNoTextToLock"));
+      return;
+    }
+    
+    var userpp = cb.pp(true, "", txt.element!=null);
+    
+    if(userpp=='')
+    {
+      cb.hlp(ltt_getmsg("errNoLockPassphrase"));
+      return;
+    }
+    else if(!userpp)
+    {
+      cb.log("waiting for pp");
+      return;
+    } else {
+      cb.log(userpp)
+    }
+    
+    try
+    {
+      //alert(txt.text);
+      //alert(userpp);
+      cb.log("lock ["+txt.text+"]");
+      txt.text = lockthetext_const_header + '\n' + fairsimple.imported.aeslib_from_movalbe_type_co_uk.aes_encrypt(txt.text, userpp) + '\n' + lockthetext_const_footer;
+      if(txt.element)
+      {
+        var l, v, ts, te;
+        v = txt.element.value;
+        l = v.length;
+        ts = v.substring(0, txt.s);
+        te = v.substring(txt.e, l);
+        txt.element.value = ts + txt.text + te;
+        txt.element.selectionStart = txt.s;
+        txt.element.selectionEnd = txt.s + txt.text.length;
+      }
+      else
+      {
+        cb.showText(ltt_getmsg("lockedText"), txt.text);
+      }
+    }
+    catch (ex) 
+    {
+      alert(ex);
+    }
+  }
+
+  function lockthetext_unlock()
+  {
+    var txt = lockthetext_get_selected_text();
+    if((!txt.element||!txt.element.length) && !txt.text)
+    {
+      //alert(txt.text);
+      cb.hlp(ltt_getmsg("errNoTextToUnlock"));
+      return;
+    }
+    
+    
+    txt = lockthetext_get_locked_text(txt);
+    if(txt.h==-1)
+    {
+      cb.hlp(ltt_getmsg('errNoMarker', lockthetext_const_header));
+      return;
+    }
+    if(txt.f==-1)
+    {
+      cb.hlp(ltt_getmsg('errNoMarker', lockthetext_const_footer));
+      return;
+    }
+    if(txt.out=="")
+    {
+      cb.hlp(ltt_getmsg("errNoTextToUnlock"));
+      return;
+    }
+    
+    var userpp = cb.pp(false, "", txt.element!=null);
+
+    if(userpp=='')
+    {
+      cb.hlp(ltt_getmsg("errNoUnlockPassphrase"));
+      return;
+    }
+    else if(!userpp)
+    {
+      cb.log("waiting for unlock pp");
+      return;
+    }
+    
+    try
+    {
+      txt.text = fairsimple.imported.aeslib_from_movalbe_type_co_uk.aes_decrypt(txt.out, userpp);
+      //alert(txt.text);
+      if(txt.element)
+      {
+        var v = txt.element.value;
+        var l = v.length;
+        var ts = v.substring(0, txt.h);
+        var te = v.substring(txt.f, l);
+        txt.element.value = ts + txt.text + te;
+        //highlight selection
+        //txt.element.selectionStart = txt.s;
+        //txt.element.selectionEnd = txt.element.value.length - l + txt.e;
+        // highlight unlocked text
+        txt.element.selectionStart = txt.h;
+        txt.element.selectionEnd = txt.h + txt.text.length;
+      }
+      else
+      {
+        cb.showText(ltt_getmsg("unlockedText"), txt.text);
+      }
+    }
+    catch (ex) 
+    {
+      cb.log(ex);
+    }
+  }
+  return {
+    lock: function() { lockthetext_lock(); },
+    unlock: function() { lockthetext_unlock(); },
+    set_cbs: function(cbs) { lockthetext_set_cbs(cbs); },
+  };
+}();
+
+</script>
+<script>
+/*
+  Copyright (c) 2009-2011 Arthur Zhang (mail2arthur@gmail.com)
+  
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+*/
+
+/*
+$Id: ltt-local030.js 90 2011-03-14 02:31:43Z arthurzhang $
+*/
+
+if(!fairsimple) var fairsimple={};
+if(!fairsimple.lockthetext) fairsimple.lockthetext={};
+
+if(console) {
+  if(console.log) {
+    console.log('Use browser logging');
+  } else {
+    //console.log = alert;
+    console.log = function(){};
+    //console.log('Use alert for logging1');
+  }
+} else {
+  //var console = {log: alert};
+  var console = {log: function(){} };
+  //console.log('Use alert for logging2');
+}
+
+fairsimple.lockthetext.local = function() {
+  var cookie_key = 'LOCKTHETEXT_LANG';
+  var msg = {ltt:{}, pg: {en:{} }, wn: {en:{} } };
+
+  msg.wn.en = { 
+    showtext: "The output text box only has your unlocked text data.\nIt doesn't have any text out of the --BEGIN/END LOCKTHETEXT-- markers.",
+  };
+  
+  msg.ltt.de  = {  
+    errNoMarker: "Markierung nicht gefunden ",
+    errNoLockPassphrase: 'Es wird ein Passwort benötigt, um den Text zu verschlüsseln',
+    errNoUnlockPassphrase: 'Es wird ein Passwort benötigt, um den Text zu entschlüsseln',
+    errNoTextToLock: 'Kein Text zur Verschlüsselung gefunden. Bitte erst Text einfügen.',
+    errNoTextToUnlock: 'Kein Text zur Entschlüsselung gefunden. Bitte erst verschlüsselten Text einfügen.',
+  };
+  msg.pg.de = {  
+    title: 'Lock The Text',
+    name: 'Lock The Text',
+    namett: 'Lock The Text - Verschlüssel deinen Text, bevor du ihn an ein Netzwerk sendest.',
+    online: 'Online',
+    offline: 'Offline',
+    ver1: 'Version',
+    ver2: ' ',
+    pastehere: 'Bitte Text hier einfügen:',
+    inputpp: 'Und Passwort eingeben:',
+    outputtext: "Ausgabe (lokal in deinem Webbrowser berechnet, wird nicht über's Netz gesendet, egal welche Buttons oder Links auf dieser Seite angeklickt werden):",
+    home: 'Lock The Text Startseite',
+    homett: 'Besuche die Lock The Text Startseite',
+    lttonline: 'Lock The Text Online',
+    lttonlinett: 'Besuche Lock The Text Online',
+    poweredby: 'Unterstützt durch',
+    designedby: 'Design von',
+    trackedby: 'Tracking über',
+    translatedby: 'Übersetzt von',
+    translatorname: 'Benjamin-G. Paul',
+    translatorlink: 'mailto:cyanoia@gmail.com',
+    btreset: 'Eingabe löschen',
+    btlock: 'Verschlüsseln',
+    btunlock: 'Entschlüsseln',
+  };
+  msg.wn.de = {
+    showtext: "Die Ausgabe-Textbox zeigt nur den entschlüsselten Text an.\nSie berücksichtigt keinen Text außerhalb der --BEGIN/END LOCKTHETEXT--- Markierungen.",
+  };
+  
+  msg.ltt.fr = {  
+    errNoMarker: "Impossible de trouver un marqueur",
+    errNoLockPassphrase: 'Vous devez définir un mot de passe pour verrouiller le texte&#160;!',
+    errNoUnlockPassphrase: 'Vous devez définir un mot de passe pour déverrouiller le texte&#160;!',
+    errNoTextToLock: "Rien à verrouiller. Veuillez d'abord coller le texte à verrouiller&#160;!",
+    errNoTextToUnlock: "Rien à déverrouiller. Veuillez d'abord coller le texte à déverrouiller&#160;!",
+  };
+  msg.pg.fr = {  
+    title: 'Lock The Text',
+    name: 'Lock The Text',
+    namett: 'Lock The Text - chiffrez vos données avant de les soumettre à un réseau.',
+    online: 'en ligne',
+    offline: 'hors connexion',
+    ver1: 'version',
+    ver2: ' ',
+    pastehere: 'Veuillez coller votre texte ici&#160;:',
+    inputpp: '… et indiquer votre mot de passe&#160;:',
+    outputtext: 'Sortie (calculée en local dans votre navigateur Web, pas envoyée vers le réseau en cliquant sur un bouton ou un lien de cette page)&#160;:',
+    home: "Page Web de l'extension",
+    homett: "Se rendre à la page Web de l'extension",
+    lttonline: 'Lock The Text sur le Web',
+    lttonlinett: 'Lock The Text sur le Web',
+    poweredby: 'Hébergée par',
+    designedby: 'Conçue par',
+    trackedby: 'Analysée par',
+    translatedby: 'Traduite par',
+    translatorname: 'Jojaba',
+    translatorlink: 'http://jojaba.free.fr/',
+    btreset: 'Effacer',
+    btlock: 'Verrouiller',
+    btunlock: 'Déverrouiller',
+  };
+  msg.wn.fr = {
+    showtext: "La zone de texte ne comporte que les données déverrouillées.\nElle ne contient pas de texte se situant hors des marqueurs --BEGIN/END LOCKTHETEXT--.",
+  };
+
+  msg.ltt.it = {  
+    errNoMarker: "Non trovo il marcatore ",
+    errNoLockPassphrase: 'Devi immettere una Passphrase per criptare il testo',
+    errNoUnlockPassphrase: 'Devi immettere una Passphrase per decriptare il testo',
+    errNoTextToLock: 'Nessun testo da criptare. Si prega di inserire prima il testo.',
+    errNoTextToUnlock: 'Nessun testo da decriptare. Si prega di inserire prima il testo criptato.',
+  };
+  msg.pg.it = {  
+    title: 'cripta il testo',
+    name: 'Cripta il testo',
+    namett: 'Cripta il testo - Cripta il tuo testo prima di inviarlo in rete.',
+    online: 'Online',
+    offline: 'Offline',
+    ver1: 'Versione',
+    ver2: ' ',
+    pastehere: 'Inserisci qua il tuo testo:',
+    inputpp: 'Inserisci qua la tua passphrase:',
+    outputtext: "Testo risultante (elaborato solo all' interno nel tuo browser, nessun dato verrà inviato in rete da questa pagina):",
+    home: 'Lock The Text Home',
+    homett: 'Visita la Home Page di Lock The Text',
+    lttonline: 'Lock The Text Online',
+    lttonlinett: 'Visita Lock The Text Online',
+    poweredby: 'Supportato da',
+    designedby: 'Progettato da',
+    trackedby: 'Tracked by',
+    translatedby: 'Tradotto da',
+    translatorname: 'Lorenzo',
+    translatorlink: '#',
+    btreset: 'Reset',
+    btlock: 'Cripta',
+    btunlock: 'Decripta',
+  };
+  msg.wn.it = {
+    showtext: "Solo la casella testo di uscita ha il tuo testo in chiaro.\nIt doesn't have any text out of the --BEGIN/END LOCKTHETEXT-- markers.",
+  };
+
+  msg.ltt.pt = {  
+    errNoMarker:"Não é possível encontrar marcador",
+    errNoLockPassphrase: 'VocÃª precisa definir uma senha para bloquear o texto!',
+    errNoUnlockPassphrase: 'VocÃª precisa definir uma senha para desbloquear o texto!',
+    errNoTextToLock: 'Nada a bloquear. Por favor, cole ou selecione o texto a bloquear!',
+    errNoTextToUnlock: 'Nada a desbloquear. Por favor, cole ou selecione o texto a desbloquear!',
+  };
+  msg.pg.pt = {  
+    title: 'Lock The Text',
+    name: 'Lock The Text',
+    namett: 'Lock The Text',
+    online: 'Online',
+    offline: 'Offline',
+    ver1: 'Versão',
+    ver2: ' ',
+    pastehere: 'Por favor, cole os dados de texto aqui:',
+    inputpp: 'Entre sua senha:',
+    outputtext: 'Saída (calculado localmente no navegador e não enviar para a rede, clicando em qualquer botão ou link nesta página):',
+    home: 'Página Principal',
+    homett: 'Página Principal',
+    lttonline: 'Lock The Text Online',
+    lttonlinett: 'Lock The Text Online',
+    poweredby: 'Hospedado por',
+    designedby: 'Projetado por',
+//    trackedby: 'Seguidos por',
+//    translatedby: 'Traduzido por',
+//    translatorname: 'Edgard Dias Magalhães',
+    //translatorlink: '',
+    btreset: 'Reset',
+    btlock: 'Bloquear',
+    btunlock: 'Desbloquear',
+  };
+  msg.wn.pt = {
+    showtext: "A caixa de texto de saída só tem o seu desbloqueado, dados de texto.\nEla não tem qualquer texto fora dos marcadores --BEGIN/END LOCKTHETEXT--.",
+  };
+
+  msg.ltt.sr = {  
+    errNoMarker:"Не могу да пронађем Маркер",
+    errNoLockPassphrase: 'Морате да подесите лозинку како бисте закључали текст!',
+    errNoUnlockPassphrase: 'Морате да подесите лозинку како бисте откључали текст!',
+    errNoTextToLock: 'Нема ничега за закључавање. Налепите или означите текст који желите да закључате!',
+    errNoTextToUnlock: 'Нема ничега за откључавање. Налепите или означите текст који желите да откључате!',
+  };
+  msg.pg.sr = {  
+    title: 'Закључај текст',
+    name: 'Закључај текст',
+    namett: 'Закључај текст',
+    online: 'Online',
+    offline: 'ту',
+    ver1: 'верзија',
+    ver2: ' ',
+    pastehere: 'Молимо Вас да залепите овде своје податке текст:',
+    inputpp: 'Унесите лозинку:',
+    outputtext: 'Излаз (ЦОМПУТЕД локално у вашем веб претраживачу и неће послати на мрежу тако што ћете кликнути на било које дугме, или линк на овој страници):',
+    home: 'Матична страница',
+    homett: 'Матична страница',
+    lttonline: 'Закључај текст на мрежи',
+    lttonlinett: 'Закључај текст на мрежи',
+    poweredby: 'Хостед би',
+    designedby: 'Дизајнирао',
+    trackedby: 'Багер је',
+    //translatedby: 'Превео',
+    //translatorname: 'ДакСРБИЈА/DakSrbija',
+    //translatorlink: 'http://www.mozilla-srbija.org/',
+    btreset: 'Ресетовање',
+    btlock: 'Закључај',
+    btunlock: 'Откључај',
+  };
+  msg.wn.sr = {
+    showtext: "излазни текст само да има откључан ваше текстуалне податке.\nОна нема текст из --BEGIN/END LOCKTHETEXT-- маркера.",
+  };
+
+
+  msg.ltt.sv = {  
+    errNoMarker:"Kan inte hitta markören ",
+    errNoLockPassphrase: 'Du måste ange en lösenfras för att låsa texten!',
+    errNoUnlockPassphrase: 'Du måste ange en lösenfras för att låsa upp texten!',
+    errNoTextToLock: 'Ingenting att låsa. Var vänlig klistra in/markera den text som skall låsas!',
+    errNoTextToUnlock: 'Ingenting att låsa upp. Var vänlig klistra in/markera den text som skall låsas upp!',
+  };
+  msg.pg.sv = {  
+    title: 'Lås texten',
+    name: 'Lås texten',
+    namett: 'Lås texten',
+    online: 'Online',
+    offline: 'Offline',
+    ver1: 'version',
+    ver2: ' ',
+    pastehere: 'Klistra in din textindata här:',
+    inputpp: 'Ange din lösenfras:',
+    outputtext: 'Utdata (beräknas lokalt i din webbläsare och kommer inte att skickas till nätverket vare sig om du klickar på en knapp eller på en länk på denna sida):',
+    home: 'Webbplats',
+    homett: 'Gå till Lock The Texts webbplats',
+    lttonline: 'Lås texten online',
+    lttonlinett: 'Gå till Lock The Texts nätversion',
+    poweredby: 'Drivs av',
+    designedby: 'Designat av',
+    trackedby: 'Spåras av',
+    translatedby: 'Översatt av',
+    translatorname: 'Mikael Hiort af Ornäs',
+    //translatorlink: '',
+    btreset: 'Återställ',
+    btlock: 'Lås',
+    btunlock: 'Lås upp',
+  };
+  msg.wn.sv = {
+    showtext: "Utdatatextrutan innehåller endast din olåsta textdata.\nDen innehåller ingen text med markörerna --BEGIN/END LOCKTHETEXT--.",
+  };
+
+  msg.ltt.th = {  
+    errNoMarker: "ไม่เจอเครื่องหมาย ",
+    errNoLockPassphrase: 'คุณต้องตั้งวลีรหัสผ่านเพื่อล็อคข้อความ',
+    errNoUnlockPassphrase: 'คุณต้องตั้งวลีรหัสผ่านเพื่อปลดล็อคข้อความ',
+    errNoTextToLock: 'ไม่มีข้อความที่จะล็อค กรุณาใส่ข้อความก่อน',
+    errNoTextToUnlock: 'ไม่มีข้อความที่จะปลดล็อค กรุณาใส่ข้อความก่อน',
+  };
+  msg.pg.th = {  
+    title: 'ล็อคเดอะเท็กซ์',
+    name: 'ล็อคเดอะเท็กซ์',
+    namett: 'ล็อคเดอะเท็กซ์ - เข้ารหัสข้อความของคุณ ก่อนส่งเข้าระบบเครือข่าย',
+    online: 'ออนไลน์',
+    offline: 'ออฟไลน์',
+    ver1: 'รุ่น',
+    ver2: ' ',
+    pastehere: 'กรุณาใส่ข้อความที่นี่:',
+    inputpp: 'ใส่วลีรหัสผ่าน:',
+    outputtext: 'ผลลัพธ์ (คำนวณในคอมพิวเตอร์เครื่องนี้ ในเว็บเบราว์เซอร์ของคุณ และจะไม่ส่งเข้าระบบเครือข่าย ไม่ว่าจะกดปุ่มหรือลิงก์ใดก็ตามในหน้านี้):',
+    home: 'หน้าหลัก ล็อคเดอะเท็กซ์',
+    homett: 'เข้าชมหน้าหลัก ล็อคเดอะเท็กซ์',
+    lttonline: 'ล็อคเดอะเท็กซ์ออนไลน์',
+    lttonlinett: 'เข้าชม ล็อคเดอะเท็กซ์ออนไลน์',
+    poweredby: 'ขับเคลื่อนโดย',
+    designedby: 'ออกแบบโดย',
+    trackedby: 'ตามรอยโดย',
+    btreset: 'ล้าง',
+    btlock: 'ล็อค',
+    btunlock: 'ปลดล็อค',
+  };
+  msg.wn.th = {
+    showtext: "กล่องข้อความผลลัพธ์มีเฉพาะข้อความที่ปลดล็อคแล้วเท่านั้น\nมันไม่มีข้อความใด ๆ ที่อยู่นอกขอบเขตเครื่องหมาย --BEGIN/END LOCKTHETEXT--",
+  };
+
+  msg.ltt.tr = {  
+    errNoMarker:"İşaretleyici bulunamıyor",
+    errNoLockPassphrase: 'Şifreleme için bir şifre belirleyin!',
+    errNoUnlockPassphrase: 'Şifreyi çözmek için şifrenizi girin!',
+    errNoTextToLock: 'Şifrelenecek veri bulunamadı. Lütfen veri girişi yapın!',
+    errNoTextToUnlock: 'Şifresi çözülebilecek bir veri bulunamadı. Lütfen kilidi kaldırılacak veri girin!',
+  };
+  msg.pg.tr = {  
+    title: '',
+    name: 'Lock The Text',
+    namett: 'Lock The Text',
+    online: 'Çevrimiçi',
+    offline: 'Çevrımdışı',
+    ver1: 'sürüm',
+    ver2: ' ',
+    pastehere: 'Girdi:',
+    inputpp: 'Şifre:',
+    outputtext: 'Çıktı:',
+    home: 'Ana sayfa',
+    homett: 'Lock The Text Ana sayfa',
+    lttonline: 'Lock The Text Online',
+    lttonlinett: 'Lock The Text Online',
+    poweredby: 'Sunan',
+    designedby: 'Tasarım',
+    trackedby: 'İzleme',
+    translatedby: '.',
+    translatorname: '.',
+    //translatorlink: '',
+    btreset: 'Sıfırla',
+	btcopy: 'Kopyala',
+    btlock: 'Şifrele',
+    btunlock: 'Şifre Çöz',
+  };
+  msg.wn.tr = {
+    showtext: "Çıkış metin kutusu sadece metin verinizi içerir.\nO --BEGIN/END LOCKTHETEXT İşaretleyiciler dışında herhangi bir metin yoktur.",
+  };
+
+﻿  msg.ltt.vi = {  
+    errNoMarker: "Không thể tìm thấy dấu ",
+    errNoLockPassphrase: 'Bạn cần đặt một mật khẩu để khóa đoạn chữ',
+    errNoUnlockPassphrase: 'Bạn cần điền mật khẩu vào để mở khóa đoạn chữ',
+    errNoTextToLock: 'Không có chữ để khóa. Trước tiên, hãy dán đoạn chữ mà bạn muốn khóa vào khung trên.',
+    errNoTextToUnlock: 'Không có chữ để mở khóa. Trước tiên, hãy dán đoạn chữ mà bạn đã khóa vào khung trên',
+  };
+  msg.pg.vi = {  
+    title: 'Khóa chữ',
+    name: 'Khóa chữ',
+    namett: 'Khóa chữ - Mã hóa dữ liệu văn bản của bạn trước khi đưa nó lên mạng.',
+    online: 'trực tuyến',
+    offline: 'ngoại tuyến',
+    ver1: '- phiên bản',
+    ver2: ' ',
+    pastehere: 'Hãy dán dữ liệu văn bản của bạn vào đây:',
+    inputpp: 'Và nhập mật khẩu mà bạn chọn vào:',
+    outputtext: 'Đầu ra (chỉ được tạo ra một cách cục bộ trong trình duyệt này của bạn và sẽ không gửi lên mạng bằng bất cứ nút hay liên kết nào trên trang này):',
+    home: 'Trang chủ Lock The Text',
+    homett: 'Ghé thăm trang chủ Lock The Text',
+    lttonline: 'Khóa chữ trực tuyến',
+    lttonlinett: 'Ghé thăm trang Khóa chữ trực tuyến',
+    poweredby: 'Được cung cấp bởi',
+    designedby: 'Thiết kế bởi',
+    trackedby: 'Theo dõi bởi',
+    translatedby: 'Được dịch bởi',
+    translatorname: 'Nguyễn Hoàng Long',
+    translatorlink: 'http://timelinelive.blogspot.com/',
+    btreset: 'Xóa hết',
+    btlock: 'Khóa',
+    btunlock: 'Mở khóa',
+  };
+  msg.wn.vi = {
+    showtext: "Đầu ra chỉ có dữ liệu văn bản đã được mở khóa của bạn.\nNó không chứa các dấu --BEGIN/END LOCKTHETEXT--.",
+  };
+
+  msg.ltt.zh = {  
+    errNoMarker:"在您的输入文本中无法找到标记",
+    errNoLockPassphrase: '您需要设置密码来锁定文本！',
+    errNoUnlockPassphrase: '您需要设置一个密码来解锁！',
+    errNoTextToLock: '没有文本。请粘贴您要锁定的文本！',
+    errNoTextToUnlock: '没有文本。请粘贴您要解锁的文本！',
+  };
+  msg.pg.zh = {  
+    title: '锁定文本',
+    name: '锁定文本',
+    namett: '锁定文本 将您的文本数据先加密再发送到网络。',
+    online: '在线版',
+    offline: '离线版',
+    ver1: ' ',
+    ver2: '版',
+    pastehere: '请将您的文本数据粘贴到这里：',
+    inputpp: '请输入您的密码:',
+    outputtext: '输出（运算于本地浏览器 在此页面点按任何按钮或链接不会发送文本数据到网络）：',
+    home: '锁定文本主页',
+    homett: '访问锁定文本主页',
+    lttonline: '锁定文本在线版',
+    lttonlinett: '访问锁定文本在线版',
+    poweredby: '服务器',
+    designedby: '页面设计',
+    trackedby: '访问统计',
+    translatedby: '翻译',
+    translatorname: 'zydyh000',
+    //translatorlink: '',
+     btreset: '清空',
+    btlock: '加锁',
+    btunlock: '解锁',
+  };
+  msg.wn.zh = {
+    showtext: "输出文本框只有您的解锁文本。\n它没有任何--BEGIN/END LOCKTHETEXT--标记以外的内容。",
+  };
+
+  var doc = {c:{}, f:{}};
+
+  function local_inputpp(userpp) {
+    return doc.f['pp'].value;
+  }
+
+  function local_showtext(tt, tout) {
+    console.log(msg.wn[doc.lang]);
+    console.log(tout);
+     doc.f['txtout'].value = tout;
+    doc.f['txtout'].select();
+    alert((doc.lang!='en' && msg.wn[doc.lang] && msg.wn[doc.lang].showtext)?msg.wn[doc.lang].showtext:msg.wn.en.showtext);
+  }
+
+  function local_get_focused_element() {
+    return doc.f['txtout'];
+  }
+  
+  function local_help(msg) {
+    alert(msg);
+  }
+  
+  function local_getmsg(id, arg) {
+    if(doc.lang!='en' && msg.ltt && msg.ltt[doc.lang])
+      return arg?msg.ltt[doc.lang][id]+arg:msg.ltt[doc.lang][id];
+  }
+  
+  function setCookie(c_name,value,exdays)
+  {
+    var exdate=new Date();
+    exdate.setDate(exdate.getDate() + exdays);
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
+    document.cookie=c_name + "=" + c_value;
+  }
+  
+  function getCookie(c_name)
+  {
+    var i,x,y,ARRcookies=document.cookie.split(";");
+    for (i=0;i<ARRcookies.length;i++)
+    {
+      x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+      y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+      x=x.replace(/^\s+|\s+$/g,"");
+      if (x==c_name)
+      {
+      return unescape(y);
+      }
+    }
+  }
+  
+  function local_init_doc() {
+    var ctrl = ['name', 'online', 'offline', 'ver1', 'ver2', 'pastehere', 'inputpp', 'outputtext', 'home', 'lttonline', 'poweredby', 'designedby', 'trackedby',
+                'btreset','btlock','btunlock','btcopy',  'translation', 'translatedby', 'translatorlink','translatethispage'];
+    var fld = ['txtin', 'pp', 'txtout'];
+    var i, c, o;
+    msg.pg.en.title = document.title;
+    for (i in ctrl) {
+      c = ctrl[i];
+      o = document.getElementById(c);
+      if(o) {
+        doc.c[c] = o;
+        if(c.substring(0,8)!='translat') {
+          if(o.nodeName=='INPUT') {
+            if(!msg.pg.en[c]) msg.pg.en[c] = o.value;
+          } else {
+            if(!msg.pg.en[c]) msg.pg.en[c] = o.innerHTML;
+            if(!msg.pg.en[c+'tt']) msg.pg.en[c+'tt'] = o.title;
+          }
+        }
+      }
+    }
+    for (i in fld) {
+      c = fld[i];
+      o = document.getElementById(c);
+      if(o) {
+        doc.f[c] = o;
+        doc.f[c].value = '';
+      }
+    }
+  }
+  
+  function local_set_lang(l) {
+    //console.log('Setting lang '+l);
+    if(l) {
+      doc.lang = l;
+      doc.c.translatethispage.style.display = l=='en'?'':'none';
+      if(msg.pg[l]) {
+        //document.cookie = l; //'lang='+l;
+        if(msg.pg[l].title)
+          document.title = msg.pg[l].title;
+        for(var c in doc.c) {
+          if(c.substring(0,8)!='translat' && (msg.pg[l][c]||msg.pg.en[c]) && doc.c[c]) {
+            var nn = doc.c[c].nodeName;
+            var mm = msg.pg[l][c]?msg.pg[l][c]:msg.pg.en[c];
+            if(nn=='INPUT') {
+              doc.c[c].value = mm;
+            } else {
+              doc.c[c].innerHTML = mm;
+              var tt = c+'tt';
+              if(nn=='A')
+                doc.c[c].title = msg.pg[l][tt]?msg.pg[l][tt]:' ';
+            }
+          } else {
+            //console.log('Failed to set lang '+l+' id '+c+' msg '+msg.pg[l][c]);
+          }
+        }
+        if(msg.pg[l].translatorname) {
+          doc.c.translatedby.innerHTML = msg.pg[l].translatedby?msg.pg[l].translatedby:'Translated by';
+          doc.c.translatorlink.innerHTML = msg.pg[l].translatorname;
+          doc.c.translatorlink.href = msg.pg[l].translatorlink?msg.pg[l].translatorlink:'#';
+          doc.c.translation.style.display = '';
+        } else {
+          doc.c.translation.style.display = 'none';
+        }
+        setCookie(cookie_key, l, 365);
+        return l;
+      }
+    } 
+    console.log('Language not found: '+l);
+  }
+  
+  function local_init_lang() {
+    //console.log(document.cookie);
+    //console.log(navigator.userAgent);
+    //console.log(navigator.language);
+    doc.lang = local_set_lang(getCookie(cookie_key))||local_set_lang(navigator.language)||local_set_lang(navigator.browserLanguage)||local_set_lang(doc.lang.substring(0,2))||'en';
+    //local_set_lang('cn');
+    console.log(doc.lang);
+  }
+  
+  function local_doit(action) {
+    
+    if(action=='init') {
+      local_init_doc();
+      local_init_lang();
+      document.getElementById('page-container').setAttribute('style', 'display:block');
+    } else if(action=='resettext') {
+      doc.f['txtin'].value = '';
+      doc.f['txtout'].value = '';
+    } else if(action=='helptotranslate') {
+      var l = navigator.language?navigator.language:(navigator.browserLanguage?navigator.browserLanguage:'undetectd');
+      var s = 'Thanks for your help!\n\n'+
+              'Please contact me at mail2arthur@gmail.com and I will send you the strings which need to be translated.\n\n'+
+              "Looks your browser's language code is " + l + '.';
+      alert(s);
+    } else {
+      var cbs = {showText:local_showtext, pp:local_inputpp, getFocusedElement:local_get_focused_element, hlp:local_help};
+      console.log(doc.lang);
+      if(doc.lang!='en' && msg.ltt[doc.lang])
+        cbs.msg = local_getmsg; //function(id, arg) { return msg.ltt[doc.lang][id];};
+      doc.f['txtout'].value = doc.f['txtin'].value;
+      doc.f['txtout'].selectionStart = doc.f['txtin'].selectionStart;
+      doc.f['txtout'].selectionEnd = doc.f['txtin'].selectionEnd;
+      
+      fairsimple.lockthetext.core.set_cbs(cbs);
+      if(action=='unlock')
+        fairsimple.lockthetext.core.unlock();
+      else
+        fairsimple.lockthetext.core.lock();
+    //doc.f['txtout'].select();
+    //doc.f['txtout'].focus();
+    }
+  }
+  
+  return {
+    doit: function(action) { local_doit(action); },
+    setlang: function(ctrl) { local_set_lang(ctrl.id.substring(5)); },
+  };
+}();
+</script>
+
+</head>
+<body onLoad="fairsimple.lockthetext.local.doit('init');">
+<noscript><br /><br />
+<center><h1>Tarayıcınızın ayarlarında Javascript'e izin vermeniz gerekiyor!</h1></center></noscript>
+<div id="page-container" style='display:none'>
+
+	
+<br>
+	<center><div id="content">
+  
+  <form name="frm" action="">
+      <span id='pastehere'>Please paste your text data here:</span>
+      <br/><textarea id="txtin" rows="6" style="width:25%;" autocomplete="off" autofocus="autofocus"></textarea>
+      <br/>
+      <br/><span id='inputpp'>And input your passphrase</span><br>
+	  <input type="text" id="pp" style="width:25%;" autocomplete="off"/><br>
+      <input type="button" id="btlock" value="Lock" onClick='fairsimple.lockthetext.local.doit("lock");' />
+      <input type="button" id="btunlock" value="Unlock" onClick='fairsimple.lockthetext.local.doit("unlock");' />
+      <br/>
+      <br/><span id='outputtext'>Output (computed locally in your web browser and will not send to network by clicking any button or link on this page):</span>
+      <br/><textarea id="txtout" rows="6" readonly="true" style="width:25%;background-color:#000000" autocomplete="off"></textarea><br>
+	  <input type="button" id="btreset" value="Reset Text" onClick="fairsimple.lockthetext.local.doit('resettext');" />
+	  
+	  
+  </form>
+	</div>
+	<div id="footer">
+    <span id='translation'><span id='translatedby'>Translated by</span> <a id='translatorlink' href="#">?</a></span>
+	</div>
+	<br><br>
+	<div id="header">
+		
+    <div id='lang'>
+    <span id='translatethispage' style='font-size:0.1em;'>[<a href="#" onClick="fairsimple.lockthetext.local.doit('helptotranslate');">Help to translate</a>]</span>
+    <a id="lang_en" href="#" onclick="fairsimple.lockthetext.local.setlang(this);", title="en English">English</a> -
+    <a id="lang_de" href="#" onclick="fairsimple.lockthetext.local.setlang(this);", title="de German">Deutsch</a> -
+    <a id="lang_fr" href="#" onclick="fairsimple.lockthetext.local.setlang(this);", title="fr French">Français</a> -
+    <a id="lang_it" href="#" onclick="fairsimple.lockthetext.local.setlang(this);", title="it Italian">Italiano</a> -
+    <a id="lang_it" href="#" onclick="fairsimple.lockthetext.local.setlang(this);", title="it Italian">Italiano</a> -
+    <a id="lang_pt" href="#" onclick="fairsimple.lockthetext.local.setlang(this);", title="pt Portuguese">Português</a> -
+    <a id="lang_sr" href="#" onclick="fairsimple.lockthetext.local.setlang(this);", title="sr Serbian">Српска</a> -
+    <a id="lang_sv" href="#" onclick="fairsimple.lockthetext.local.setlang(this);", title="sv Swedish">Svenska</a> -
+    <a id="lang_th" href="#" onclick="fairsimple.lockthetext.local.setlang(this);", title="th Thai">ไทย</a> -
+    <a id="lang_tr" href="#" onclick="fairsimple.lockthetext.local.setlang(this);", title="tr Turkish">Türkçe</a> -
+    <a id="lang_vi" href="#" onclick="fairsimple.lockthetext.local.setlang(this);", title="vi Vietnamese">Tiếng Việt</a> -
+    <a id="lang_zh" href="#" onclick="fairsimple.lockthetext.local.setlang(this);", title="zh Chinese">中文</a>
+    </div>
+    </div>
+	
+</div>
+</body>
+</html>
